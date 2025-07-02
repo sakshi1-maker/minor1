@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0f5;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b83232;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #b83244;
+}
+
+.hero {
+  background: linear-gradient(to right, #fdeff9, #ec38bc20);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.btn {
+  padding: 12px 25px;
+  background-color: #b8323d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #a52a6b;
+}
+
+.about {
+  text-align: center;
+  padding: 60px 30px;
+}
+.about h2 {
+  font-size: 2rem;
+  color: #b83280;
+  margin-bottom: 15px;
+}
+
+.gallery-preview {
+  padding: 50px 20px;
+  text-align: center;
+}
+.gallery-preview h2 {
+  font-size: 2rem;
+  color: #b83280;
+  margin-bottom: 30px;
+}
+.art-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.art-card {
+  background: #fff;
+  padding: 30px;
+  width: 200px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.art-card:hover {
+  transform: translateY(-5px);
+}
+.art-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff0f5;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+body.dark-mode header {
+  background-color: #333;
+}
+body.dark-mode .hero {
+  background-color: #ff5e72;
+}
+body.dark-mode .about {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode nav a{
+    color: white;
+}
