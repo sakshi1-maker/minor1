@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtPulse - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>ArtPulse</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                  <li><a href="contact.html" class="nav-link">Contact</a></li>
+<li><a href="login.html" class="nav-link">Login</a></li>
+              
+            </ul>
+            <div class="nav-actions">
+                <button id="cart-btn" class="cart-btn" onclick="showCart()">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Extraordinary Art</h1>
+                <p>Explore our curated collection of stunning artworks from talented artists around the world</p>
+                <a href="gallery.html" class="cta-btn">Explore Gallery</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=500&fit=crop" alt="Art Gallery">
+            </div>
+        </section>
+
+        <section class="featured-works">
+    <div class="container">
+        <h2>Featured Works</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop" alt="Dreamspace">
+                <div class="featured-info">
+                    <h3>Dreamspace</h3>
+                    <p>An ethereal journey through subconscious realms</p>
+                    <div class="featured-price">$899.99</div>
+                    <button class="featured-btn" onclick="addToCart(101, 'Dreamspace', 'Luna Martinez', 899.99, 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Stargazer">
+                <div class="featured-info">
+                    <h3>Stargazer</h3>
+                    <p>Celestial beauty captured in vibrant cosmic colors</p>
+                    <div class="featured-price">$1,299.99</div>
+                    <button class="featured-btn" onclick="addToCart(102, 'Stargazer', 'Cosmic Chen', 1299.99, 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="Nature's Rhythm">
+                <div class="featured-info">
+                    <h3>Nature's Rhythm</h3>
+                    <p>The harmonious dance of natural elements</p>
+                    <div class="featured-price">$749.99</div>
+                    <button class="featured-btn" onclick="addToCart(103, 'Nature\'s Rhythm', 'Forest Williams', 749.99, 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ArtPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button id="close-cart" class="close-btn" onclick="hideCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

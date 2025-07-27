@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtPulse - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>ArtPulse</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                  <li><a href="contact.html" class="nav-link">Contact</a></li>
+<li><a href="login.html" class="nav-link">Login</a></li>
+              
+            </ul>
+            <div class="nav-actions">
+                <button id="cart-btn" class="cart-btn" onclick="showCart()">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Art Gallery</h1>
+                <p>Discover and collect extraordinary artworks</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="painting">Paintings</button>
+                    <button class="filter-btn" data-filter="sculpture">Sculptures</button>
+                    <button class="filter-btn" data-filter="digital">Digital Art</button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid">
+    <div class="art-card" data-category="painting">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=250&fit=crop" alt="Sunset Dreams">
+        <div class="art-card-content">
+            <h3>Sunset Dreams</h3>
+            <p class="artist">by Elena Rodriguez</p>
+            <div class="price">$299.99</div>
+            <button class="add-to-cart-btn" onclick="addToCart(1, 'Sunset Dreams', 'Elena Rodriguez', 299.99, 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="painting">
+        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=300&h=250&fit=crop" alt="Urban Rhythm">
+        <div class="art-card-content">
+            <h3>Urban Rhythm</h3>
+            <p class="artist">by Marcus Johnson</p>
+            <div class="price">$450.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(2, 'Urban Rhythm', 'Marcus Johnson', 450.00, 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="digital">
+        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=300&h=250&fit=crop" alt="Digital Harmony">
+        <div class="art-card-content">
+            <h3>Digital Harmony</h3>
+            <p class="artist">by Yuki Tanaka</p>
+            <div class="price">$199.99</div>
+            <button class="add-to-cart-btn" onclick="addToCart(3, 'Digital Harmony', 'Yuki Tanaka', 199.99, 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="sculpture">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=250&fit=crop" alt="Stone Whispers">
+        <div class="art-card-content">
+            <h3>Stone Whispers</h3>
+            <p class="artist">by David Chen</p>
+            <div class="price">$750.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(4, 'Stone Whispers', 'David Chen', 750.00, 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="painting">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=250&fit=crop" alt="Ocean Depths">
+        <div class="art-card-content">
+            <h3>Ocean Depths</h3>
+            <p class="artist">by Sarah Williams</p>
+            <div class="price">$380.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(5, 'Ocean Depths', 'Sarah Williams', 380.00, 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="digital">
+        <img src="https://images.unsplash.com/photo-1551913902-c92207136625?w=300&h=250&fit=crop" alt="Neon Future">
+        <div class="art-card-content">
+            <h3>Neon Future</h3>
+            <p class="artist">by Alex Kim</p>
+            <div class="price">$275.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(6, 'Neon Future', 'Alex Kim', 275.00, 'https://images.unsplash.com/photo-1551913902-c92207136625?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="sculpture">
+        <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=300&h=250&fit=crop" alt="Bronze Flow">
+        <div class="art-card-content">
+            <h3>Bronze Flow</h3>
+            <p class="artist">by Maria Santos</p>
+            <div class="price">$920.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(7, 'Bronze Flow', 'Maria Santos', 920.00, 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="painting">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=250&fit=crop" alt="Forest Meditation">
+        <div class="art-card-content">
+            <h3>Forest Meditation</h3>
+            <p class="artist">by James Park</p>
+            <div class="price">$340.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(8, 'Forest Meditation', 'James Park', 340.00, 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="digital">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=250&fit=crop" alt="Pixel Dreams">
+        <div class="art-card-content">
+            <h3>Pixel Dreams</h3>
+            <p class="artist">by Luna Zhang</p>
+            <div class="price">$150.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(9, 'Pixel Dreams', 'Luna Zhang', 150.00, 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="sculpture">
+        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=250&fit=crop" alt="Marble Grace">
+        <div class="art-card-content">
+            <h3>Marble Grace</h3>
+            <p class="artist">by Antonio Rossi</p>
+            <div class="price">$1200.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(10, 'Marble Grace', 'Antonio Rossi', 1200.00, 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="painting">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=250&fit=crop" alt="Mountain Majesty">
+        <div class="art-card-content">
+            <h3>Mountain Majesty</h3>
+            <p class="artist">by Rachel Green</p>
+            <div class="price">$425.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(11, 'Mountain Majesty', 'Rachel Green', 425.00, 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="art-card" data-category="digital">
+        <img src="https://images.unsplash.com/photo-1551913902-c92207136625?w=300&h=250&fit=crop" alt="Cyber Bloom">
+        <div class="art-card-content">
+            <h3>Cyber Bloom</h3>
+            <p class="artist">by Kai Nakamura</p>
+            <div class="price">$320.00</div>
+            <button class="add-to-cart-btn" onclick="addToCart(12, 'Cyber Bloom', 'Kai Nakamura', 320.00, 'https://images.unsplash.com/photo-1551913902-c92207136625?w=300&h=250&fit=crop')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ArtPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button id="close-cart" class="close-btn" onclick="hideCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
